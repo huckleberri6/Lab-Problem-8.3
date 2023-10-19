@@ -8,9 +8,16 @@ int value(string str);
 
 int main()
 {
-	string s = "MDCCCLXXXVIII";
-	int val = convertRomanToInt(s);
-	cout << val;
+	string input;
+	while (true)
+	{
+		cout << "Enter Roman number or Q to quit: ";
+		cin >> input;
+		if (input == "Q")
+			break;
+		int num = convertRomanToInt(input);
+		cout << input << " = " << num << endl;
+	}
 }
 
 int value(string str)
